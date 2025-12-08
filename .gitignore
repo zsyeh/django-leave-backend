@@ -1,13 +1,88 @@
-*.db
-*.sqlite3
-*.xlsx
-students_report.html
-.idea/
+# ==========================
+# Python / Django 核心忽略项
+# ==========================
+# 字节码编译文件 (你最头疼的部分)
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.pyw
-*.pyz
-*.pyz.d
+*.py[cod]
+*$py.class
+
+# C 扩展
+*.so
+
+# Django 数据库 (本地开发数据库不应提交)
+db.sqlite3
+db.sqlite3-journal
+
+# 环境变量文件 (包含密钥，绝对不能提交)
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# 常用日志文件
+*.log
+nohup.out
+
+# Django 收集的静态文件目录 (通常在部署时生成)
+# 如果你的 staticfiles 是源码目录请注释掉这一行，如果是 collectstatic 生成的则保留
+# staticfiles/
+
+# 媒体文件 (用户上传的文件)
+media/
+
+# ==========================
+# 前端 (Vue / Node.js)
+# ==========================
+# 依赖包 (体积巨大，必须忽略)
+node_modules/
+
+# 构建输出目录
+dist/
+dist-ssr/
+
+# 本地环境变量
+.env.local
+.env.*.local
+
+# npm/yarn/pnpm 日志
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 编辑器目录 (可选)
+.idea/
 .vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ==========================
+# 操作系统 / 压缩包
+# ==========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 压缩文件 (看你上传了 django.tar.gz，如果不需要版本控制建议忽略)
+*.tar
+*.tar.gz
+*.zip
+*.rar
+
+# ==========================
+# 特定文件 (根据你上传的文件列表)
+# ==========================
+# 看起来是测试或临时脚本
+test.txt
